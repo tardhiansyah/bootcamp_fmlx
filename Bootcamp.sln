@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloCat", "HelloCat\HelloC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project_Day_1", "Project_Day_1", "{91DED0E7-13A6-4B6A-B0DB-8B501D13E2C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car Project", "Car Project\Car Project.csproj", "{6C66701D-84A1-43C1-B5B0-2EB63FBA6E8B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
