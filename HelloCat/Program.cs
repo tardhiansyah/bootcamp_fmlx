@@ -5,7 +5,6 @@
 		Console.WriteLine("Hello Cat!");
 		
 		Cat kuro = new Cat();
-		kuro.Meow(3);
 	}
 }
 

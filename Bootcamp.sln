@@ -1,4 +1,4 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloCat", "HelloCat\HelloCat.csproj", "{42FC2D34-0B7A-438D-A98A-12007271CBA6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project_Day_1", "Project_Day_1", "{91DED0E7-13A6-4B6A-B0DB-8B501D13E2C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car Project", "Car Project\Car Project.csproj", "{6C66701D-84A1-43C1-B5B0-2EB63FBA6E8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +42,10 @@ Global
 		{42FC2D34-0B7A-438D-A98A-12007271CBA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42FC2D34-0B7A-438D-A98A-12007271CBA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42FC2D34-0B7A-438D-A98A-12007271CBA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C66701D-84A1-43C1-B5B0-2EB63FBA6E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C66701D-84A1-43C1-B5B0-2EB63FBA6E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C66701D-84A1-43C1-B5B0-2EB63FBA6E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C66701D-84A1-43C1-B5B0-2EB63FBA6E8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{42FC2D34-0B7A-438D-A98A-12007271CBA6} = {91DED0E7-13A6-4B6A-B0DB-8B501D13E2C2}
