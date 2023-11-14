@@ -17,7 +17,7 @@ class Program
         car.Start();
 
         Car car2 = new Car();
-        car2.engine = petrolEngine;
+        car2.engine = dieselEngine;
         car2.door = carDoor;
         car2.tire = tire;
         car2.name = "Panther";
