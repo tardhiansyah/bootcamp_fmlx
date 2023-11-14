@@ -21,7 +21,7 @@ class Program
         car2.door = carDoor;
         car2.tire = tire;
         car2.name = "Panther";
-        Console.WriteLine("\n" + car2.name);
+        Console.WriteLine("\n" + car2.name + ", Engine brand " + car2.EngineBrandCheck());
         car2.Start();
 
         Car car3 = new Car()
@@ -31,7 +31,8 @@ class Program
             tire = tire,
             name = "Corolla"
         };
-        Console.WriteLine("\n" + car3.name);
+        // Bad practices, it's not implement encapsulation!
+        Console.WriteLine("\n" + car3.name + ", Engine brand " + car3.engine.brand);
         car3.Start();
     }
 }

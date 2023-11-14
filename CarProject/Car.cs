@@ -25,4 +25,9 @@ public class Car
         
         Console.WriteLine($"{this.name} now is ready!");
     }
+
+    public string EngineBrandCheck()
+    {
+        return this.engine.brand;
+    }
 }
