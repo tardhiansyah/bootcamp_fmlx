@@ -1,6 +1,4 @@
-using System.Reflection.Metadata.Ecma335;
-
-namespace Polymorphism_Overloading;
+namespace Polymorphism_MethodHiding;
 
 public class Animal
 {
@@ -10,8 +8,7 @@ public class Animal
     // Boleh pake virtual atau nggak
     // Istilahnya virtual ini memperbolehkan method diganti oleh child (Overriding)
     // Atau nggak (Method Hiding)
-    // 
-    public virtual void MakeSound() 
+    public void MakeSound() 
     {
         Console.WriteLine("Animal Make Sound");
     }

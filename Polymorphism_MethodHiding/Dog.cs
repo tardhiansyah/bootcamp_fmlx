@@ -1,6 +1,9 @@
-namespace Polymorphism_Overloading;
+namespace Polymorphism_MethodHiding;
 
-public class Dog
+public class Dog : Animal
 {
-    
+    public new void MakeSound()
+    {
+        Console.WriteLine("Woof!");
+    }
 }

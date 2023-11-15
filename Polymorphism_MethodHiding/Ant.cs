@@ -1,4 +1,4 @@
-namespace Polymorphism_Overloading;
+namespace Polymorphism_MethodHiding;
 
 public class Ant : Animal
 {
