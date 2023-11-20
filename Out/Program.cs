@@ -1,21 +1,15 @@
-﻿using System.ComponentModel;
-using System.Diagnostics;
-
-class Program
+﻿class Program
 {
     static void Main()
     {
-        string number = "30a";
-        int.TryParse(number, out int a);
-        Console.WriteLine(a);
-
-        int x = 5;
-        
+        int a;
+        AddTwo(out a);
+        Console.WriteLine(a);   
     }
     
-    static void Add(out int y)
+    static void AddTwo(out int y)
     {
         y = 0;
-        
+        y += 2;
     }
 }
