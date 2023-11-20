@@ -12,7 +12,7 @@ class Program
 			new Company(1, "PLN", "Listrik Company"),
 			new Jail()
 		};
-		GameController game = new GameController(tiles);
+		GameController game = new(tiles);
         game.CallAction(0);
         game.CallAction(1);
         game.CallAction(2);
@@ -21,7 +21,7 @@ class Program
 
 class GameController
 {
-    Tile[] tiles;
+    readonly Tile[] tiles;
 
     public GameController(Tile[] ts)
     {
@@ -43,88 +43,5 @@ class GameController
         {
             // ((Jail) tiles[index]).Buy();
         }
-    }
-}
-
-public enum TileType
-{
-    City,
-    Company,
-    Jail
-}
-
-public interface IProperty
-{
-    public int GetPrice();
-    public void Buy();
-}
-
-public abstract class Tile
-{
-    public readonly TileType type;
-    public readonly string description;
-    public readonly string name;
-
-    public Tile(TileType type, string description, string name)
-    {
-        this.type = type;
-        this.description = description;
-        this.name = name;
-    }
-    public Tile()
-    {
-
-    }
-}
-
-class City : Tile, IProperty
-{
-    private int _price;
-
-    public City(int price, string description, string name) : base(TileType.City, description, name)
-    {
-        _price = price;
-    }
-
-    public void Buy()
-    {
-        Console.WriteLine("Buy City");
-    }
-
-    public int GetPrice()
-    {
-        return _price;
-    }
-
-    public void Build()
-    {
-        Console.WriteLine("Build city");
-    }
-}
-
-class Company : Tile, IProperty
-{
-    private int _price;
-    public Company(int price, string description, string name) : base(TileType.Company, description, name)
-    {
-        _price = price;
-    }
-
-    public void Buy()
-    {
-        Console.WriteLine("Buy Company");
-    }
-
-    public int GetPrice()
-    {
-        return _price;
-    }
-}
-
-class Jail : Tile
-{
-    public void Roll()
-    {
-        // Roll;
     }
 }
