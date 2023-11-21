@@ -9,72 +9,77 @@ using System.Text;
 
 namespace Tugas_1;
 
-public static class FooBar
+public class FooBar
 {
-    private static int _foo = 3;
-    private static int _bar = 5;
+    private static readonly Dictionary<int, string> _conditions = new()
+    {
+        {3, "Foo"},
+        {5, "Bar"}
+    };
 
-    // TODO: Handling supaya user tidak bisa set _foo = 0 & _bar = 0 ?
-    // public static int Foo
-    // {
-    //     get { return _foo; }
-    //     set { _foo = value; }
-    // }
-    // public static int Bar
-    // {
-    //     get { return _bar; }
-    //     set { _bar = value; }
-    // }
+    public static bool AddCondition(int value, string text)
+    {   
+        if (value == 0)
+            return false;
+        
+        if (_conditions.ContainsKey(value))
+            _conditions[value] = text;
+        else
+            _conditions.Add(value, text);
 
+        return true;
+    }
+    public static bool RemoveCondition(int value)
+    {
+        if (value == 3 || value == 5)
+            return false;
 
-    // * Check only the inputted number
-    public static string Check(int number)
+        return _conditions.Remove(value);
+    }
+    public static string GetCondition()
+    {
+        return "{" + string.Join("; ", _conditions.Select(item => item.Key + ":" + item.Value)) + "}";
+    }
+    public static string? GetCondition(int key)
+    {
+        _conditions.TryGetValue(key, out string? value);
+        return value;
+    }
+
+    public static string CheckOnly(int number)
     {
         if (number == 0)
-        {
             return number.ToString();
+        
+        StringBuilder sb = new();
+        foreach (var item in _conditions)
+        {
+            if (number % item.Key == 0)
+                sb.Append(item.Value);
         }
 
-        if (number % (_foo * _bar) == 0)
-        {
-            return "foobar";
-        }
-        else if (number % _foo == 0)
-        {
-            return "foo";
-        }
-        else if (number % _bar == 0)
-        {
-            return "bar";
-        }
-        else
-        {
+        if (sb.Length == 0)
             return number.ToString();
-        }
+
+        return sb.ToString();
     }
-
-    // * Check from 0 to inputted number
-    public static string CheckAll(int number)
+    public static string Check(int number)
     {
-        return (number < 0) ? CheckAll(number, 0) : CheckAll(0, number);
+        return Check(0, number);
     }
-
-    // * check the numbers in the range
-    public static string CheckAll(int start, int end)
+    public static string Check(int start, int end)
     {
         bool reverse = start > end;
+        
+        int step = reverse ? -1 : 1;
 
         StringBuilder sb = new();
-        for (int i = start; reverse ? (i >= end) : (i <= end); i += reverse ? -1 : 1)
+        for (int i = start; reverse ? (i >= end) : (i <= end); i += step)
         {
-            sb.Append(Check(i));
-
+            sb.Append(CheckOnly(i));
             if (reverse ? (i > end) : (i < end))
-            {
                 sb.Append(", ");
-            }
         }
-        
         return sb.ToString();
     }
 }
