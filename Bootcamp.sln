@@ -1,4 +1,4 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
@@ -156,6 +156,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePubSub", "SimplePubSub\SimplePubSub.csproj", "{453B341B-CAC5-4978-9484-EBA0C06B288E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventTutorial", "EventTutorial\EventTutorial.csproj", "{13A63437-33E4-4A91-ADA6-697796987843}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Youtuber", "Youtuber\Youtuber.csproj", "{0B437D73-0533-4B53-AAB4-6D6930FF5A40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameController", "GameController\GameController.csproj", "{506EB9ED-ADD0-424A-B753-A77F87705553}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -446,6 +450,14 @@ Global
 		{13A63437-33E4-4A91-ADA6-697796987843}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13A63437-33E4-4A91-ADA6-697796987843}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13A63437-33E4-4A91-ADA6-697796987843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B437D73-0533-4B53-AAB4-6D6930FF5A40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B437D73-0533-4B53-AAB4-6D6930FF5A40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B437D73-0533-4B53-AAB4-6D6930FF5A40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B437D73-0533-4B53-AAB4-6D6930FF5A40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{506EB9ED-ADD0-424A-B753-A77F87705553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{506EB9ED-ADD0-424A-B753-A77F87705553}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{506EB9ED-ADD0-424A-B753-A77F87705553}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{506EB9ED-ADD0-424A-B753-A77F87705553}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{453B341B-CAC5-4978-9484-EBA0C06B288E} = {77AE8633-DCDA-4906-B337-AF8D6D3DECEF}
