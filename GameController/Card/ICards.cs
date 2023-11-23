@@ -3,11 +3,16 @@ namespace GameController;
 public interface ICard
 {
     int ID { get; }
-    public CardStatus Status { get; set; }
+    CardStatus Status { get; set; }
+    CardColor Color { get; }
 }
 
 public interface INumberCard : ICard
 {
     int Number { get; }
-    CardColor Color { get; }
+}
+
+public interface IDrawCard : ICard
+{
+    int DrawNumber { get; }
 }

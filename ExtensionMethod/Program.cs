@@ -9,6 +9,7 @@ class Program
     {
         Car car = new();
         car.Cetak("Toyota");
+        car.EngineRun();
     }   
 }
 

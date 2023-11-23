@@ -9,6 +9,8 @@ public class VideoEncoder
     // 2 - Define the event based on the delegate
     // 3 - Raise the event
     // Detailed way
+    // public delegate void VideoEncodedEventHandler(string t);
+    // public event VideoEncodedEventHandler VideoEncoded;
     // public delegate void VideoEncodedEventHandler(object source, VideoEventArgs args);
     // public event VideoEncodedEventHandler VideoEncoded;
 

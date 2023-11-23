@@ -6,24 +6,34 @@ class Controller
 {
     // Custom delegete
     public delegate void PlayerCreatedEventHandler(IPlayer player);
-    public event PlayerCreatedEventHandler playerCreated;
+    public event PlayerCreatedEventHandler NewPlayerCreated = null!;
     // Action
-    public event Action<INumberCard, CardStatus> cardStatusUpdated;
+    public event Action<ICard, CardStatus> CardStatusUpdated = null!;
 
 
-    private Dictionary<IPlayer, HashSet<INumberCard>> _players;
-    private HashSet<INumberCard> _deckCards;
+    private readonly Dictionary<IPlayer, HashSet<ICard>> _players;
+    // private readonly HashSet<ICard> _deckCards;
 
 
-    public Controller(IPlayer player1, IPlayer player2)
+    public Controller()
     {
         _players = new();       // Kosongan
-        _deckCards = new();     // Kosongan
-        _players.Add(player1, new HashSet<INumberCard>());
-        _players.Add(player2, new HashSet<INumberCard>());
+        // _deckCards = new();     // Kosongan
     }
 
-    public bool AddCard(IPlayer player, params INumberCard[] cards)
+    public void AddPlayer(params IPlayer[] players)
+    {
+        foreach (var player in players)
+        {
+            if (!_players.ContainsKey(player))
+            {
+                _players.Add(player, new HashSet<ICard>());
+                OnAddedPlayer(player);
+            }
+        }  
+    }
+
+    public bool AddCard(IPlayer player, params ICard[] cards)
     {
         if(!_players.ContainsKey(player))
             return false;
@@ -36,9 +46,14 @@ class Controller
         return true;  
     }
 
-    protected virtual void OnChangedCardStatus(INumberCard card, CardStatus status)
+    protected virtual void OnAddedPlayer(IPlayer player)
+    {
+        NewPlayerCreated?.Invoke(player);
+    }
+
+    protected virtual void OnChangedCardStatus(ICard card, CardStatus status)
     {
         card.Status = status;
-        cardStatusUpdated.Invoke(card, status);
+        CardStatusUpdated?.Invoke(card, status);
     }
 }   

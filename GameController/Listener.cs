@@ -2,23 +2,28 @@ using System.Numerics;
 
 namespace GameController;
 
-public class UI
+public static class UI
 {
-    public void CardUpdated(INumberCard card, CardStatus status)
+    public static void CardUpdated(ICard card, CardStatus status)
     {
         Console.WriteLine($"Card : {card.ID} status changed to {status}");
     }
+
+    public static void PlayerCreated(IPlayer player)
+    {
+        Console.WriteLine($"Player : {player.Name} ({player.ID}) Created");
+    }
 }
 
-public class DataBase
+public static class DataBase
 {
-    public void LogToDB(ICard card, CardStatus status)
+    public static void LogToDB(ICard card, CardStatus status)
     {
         Console.WriteLine($"{DateTime.Now} - Card : {card.ID} status changed to {status}");
     }
 
-    public void LogToDB(IPlayer card, CardStatus status)
+    public static void LogToDB(IPlayer player)
     {
-        Console.WriteLine($"{DateTime.Now} - Card : {card.ID} status changed to {status}");
+        Console.WriteLine($"{DateTime.Now} - Player : {player.Name} ({player.ID}) Created");
     }
 }
