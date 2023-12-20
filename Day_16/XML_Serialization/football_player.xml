@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfFootballPlayer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FootballPlayer>
+    <Name>Atep</Name>
+    <Club>Persib</Club>
+    <Age>30</Age>
+  </FootballPlayer>
+  <FootballPlayer>
+    <Name>Kevin D.B.</Name>
+    <Club>Manchester City</Club>
+    <Age>30</Age>
+  </FootballPlayer>
+  <FootballPlayer>
+    <Name>Garnacho</Name>
+    <Club>Manchester United</Club>
+    <Age>30</Age>
+  </FootballPlayer>
+</ArrayOfFootballPlayer>
